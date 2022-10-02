@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <?php include_once('./view/src/header.php'); ?>
+  <?php include_once('src/header.php'); ?>
   <title>Crud php</title>
 </head>
 
@@ -36,12 +36,9 @@
       </tbody>
     </table>
   </div>
-
+  
   <?php include_once('src/footer.php') ?>
-
   <!-- incluyo mi funcion clientes -->
-
+<script src="js/cliente.js"></script>
 </body>
-
-<script src="js/clientes.js"></script>
 </html>
