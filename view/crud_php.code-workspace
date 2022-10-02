@@ -1,10 +1,8 @@
 {
 	"folders": [
 		{
+			"name": "crud_php",
 			"path": ".."
-		},
-		{
-			"path": "../../../../Users/Manuel Romero/Documents/PHP_PROYECTOS/prueba-konecta/config"
 		}
 	],
 	"settings": {}

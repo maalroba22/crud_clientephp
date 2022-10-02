@@ -37,8 +37,11 @@
     </table>
   </div>
 
-  <?php include_once('./view/src/footer.php') ?>
+  <?php include_once('src/footer.php') ?>
+
+  <!-- incluyo mi funcion clientes -->
 
 </body>
 
+<script src="js/clientes.js"></script>
 </html>
