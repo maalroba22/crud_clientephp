@@ -1,2 +1,3 @@
 <?php
-include_once('./view/index.php');
+/* header('Location: ./view/'); */
+header('Location: ./view/index.php');

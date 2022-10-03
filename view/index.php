@@ -3,6 +3,8 @@
 
 <head>
   <?php include_once('src/header.php'); ?>
+ 
+
   <title>Crud php</title>
 </head>
 
@@ -28,17 +30,20 @@
           <td>yati</td>
           <td>3023908743</td>
           <td>
-            <button class="btn btn-primary">Update</button>
-            <button class="btn btn-danger">Delte</button>
+
+            <i class="bi bi-trash3 delete"></i>
+            <i class="bi bi-journal-check update"></i>
+
           </td>
         </tr>
 
       </tbody>
     </table>
   </div>
-  
+
   <?php include_once('src/footer.php') ?>
   <!-- incluyo mi funcion clientes -->
-<script src="js/cliente.js"></script>
+  <script src="js/cliente.js"></script> 
 </body>
+
 </html>
