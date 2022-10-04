@@ -13,7 +13,7 @@ class Clients
         include_once('../config/init_db.php');
             DB::$encoding = 'utf8';
             $resul = DB::query("SELECT * FROM cliente"); 
-            print_r($resul);
+           /*  print_r($resul); */
             return $resul;  
 
     }

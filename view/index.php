@@ -24,18 +24,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Mneul</td>
-          <td>romero</td>
-          <td>yati</td>
-          <td>3023908743</td>
-          <td>
-
-            <i class="bi bi-trash3 delete"></i>
-            <i class="bi bi-journal-check update"></i>
-
-          </td>
-        </tr>
+       
 
       </tbody>
     </table>
