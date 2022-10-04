@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+getAllClient()
 })
 
 /**
@@ -9,15 +9,16 @@ $(document).ready(function () {
 function getAllClient() {
     $.ajax({
         type: "POST",
-        url: "../../controllers/clientes.php",
+        url: "../controllers/client.php",
         data: { opcn: 'getAllClient' },
         dataType: "json",
         success: function (response) {
-            console.log('response')
-        }
-    })
-        .fail(function () {
+            console.log(response)
+        }    
+    }) .fail(function () {
             console.log('error')
         })
 
 }
+
+
