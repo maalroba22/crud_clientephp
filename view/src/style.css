@@ -8,6 +8,22 @@
 }
 .input{
     border-style: none;
-    border-bottom: solid gray 1px;
-    margin-bottom: -1rem;
+    border-bottom: solid #B8B8B8 1px;
+  
+    
 }
+input:focus {
+    outline: none;
+    border-bottom: solid 2px;
+    border-color: #909090;
+    transition: 0.2s linear;
+    box-shadow: none;
+    
+  }
+  input:hover {
+    outline: none;
+    border-bottom: solid 1px;
+    border-color: #909090;
+    transition: 0.1s linear;
+    box-shadow: none;
+  }

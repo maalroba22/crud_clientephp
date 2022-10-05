@@ -9,5 +9,8 @@ switch ($method) {
             $res = Clients::getAllClients();
             echo json_encode($res);
             break;
+           case 'crear':
+            $res = Clients::addClient($_POST);
+            echo json_encode($res) ;
       }
 }

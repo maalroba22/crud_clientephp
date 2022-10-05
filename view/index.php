@@ -28,8 +28,8 @@
     </table>
   </div>
 
-  <?php include_once('src/footer.php') ?>
   <?php include_once('conponets/modalClient.php') ?>
+  <?php include_once('src/footer.php') ?>
   <!-- incluyo mi funcion clientes -->
   <script src="js/cliente.js"></script>
 

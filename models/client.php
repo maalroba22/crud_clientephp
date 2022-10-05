@@ -17,5 +17,29 @@ class Clients
             return $resul;  
 
     }
+
+    /**
+     * @description: permite crear un cliente
+     * @params : data
+     */
+
+public static function addClient($data){
+     include_once('../config/init_db.php');
+    DB::$encoding = 'utf8';
+    $insert = DB::query( "INSERT INTO cliente(
+                                nombre_c,
+                                apellido_c,
+                                direccion,
+                                telefono,
+                                estado
+                                )
+                              VALUES(
+                                '{$data['nombre']}', 
+                                '{$data['apellido']}', 
+                                '{$data['direccion']}', 
+                                '{$data['telefono']}', 
+                                1
+                              )");
+                              return $insert;
+                    } 
 }
-?>

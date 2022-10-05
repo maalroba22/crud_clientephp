@@ -14,25 +14,25 @@
 
           <div class="mb-3">
             <label for="recipient-name" class="col-form-label">Nombre:</label>
-            <input type="text" class="form-control input" id="nombre" placeholder="ingrese sun Nombre">
+            <input type="text" class="form-control input" id="nombre"  name="nombre" placeholder="ingrese su Nombre">
           </div>
           <div class="mb-3">
             <label for="recipient-name" class="col-form-label">Apellido:</label>
-            <input type="text" class="form-control input" id="apellido" placeholder="ingrese sun Nombre">
+            <input type="text" class="form-control input" id="apellido" name="apellido" placeholder="ingrese su Apellido">
           </div>
           <div class="mb-3">
             <label for="recipient-name" class="col-form-label">Direccion:</label>
-            <input type="text" class="form-control input" id="direccion" placeholder="ingrese sun Nombre">
+            <input type="text" class="form-control input" id="direccion" name="direccion" placeholder="ingrese su Direccion">
           </div>
           <div class="mb-3">
             <label for="recipient-name" class="col-form-label">Telefono:</label>
-            <input type="text" class="form-control input" id="telefono" placeholder="ingrese sun Nombre">
+            <input type="text" class="form-control input" id="telefono" name="telefono" placeholder="ingrese sun Telefono">
           </div>
         </form>
       </div>
       <div class="modal-footer">
         
-        <button type="button" class="btn btn-primary">Guardar Cliente</button>
+        <button type="submit" id="guardarCliente" class="btn btn-primary">Guardar Cliente</button>
       </div>
     </div>
   </div>
