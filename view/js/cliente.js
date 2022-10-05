@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
     getAllClient()
 })
@@ -24,12 +25,9 @@ function getAllClient() {
                             <i class="bi bi-trash3 delete"></i>
                             <i class="bi bi-journal-check update"></i>
                             </td>
-                            </tr>
-             `                               
-            })
-
-            
-              
+                         </tr>
+                        `                               
+            })              
            $('tbody').html(data)
         }
     }).fail(function () {
@@ -38,4 +36,12 @@ function getAllClient() {
 
 }
 
+/**
+ * @description: Evento para Mostrar la Modal
+ */
 
+/* $('body').on('click','#btn_modal',()=>{
+  console.log('estoy en el btn del index')
+    $('#madalCliente').modal('show') 
+ /*   document.getElementById('frmCliente').reset(); */
+//}) 
