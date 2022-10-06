@@ -43,16 +43,15 @@ class Clients
     return $insert;
   }
 
+  /**
+   * @description: Buscar cliente por id
+   * @param id
+   */
   public static function buscarId($id){
-    print_r('recibiendo');
-   /*  include_once('../config/init_db.php');
+   include_once('../config/init_db.php');
     DB::$encoding = 'utf8';
-    $buscar = DB::query("SELECT * FROM cliente WHERE id_cliente = '{$id['id']}' ");
- */
-
-
-
-
+    $buscar = DB::query("SELECT * FROM cliente WHERE id_cliente = '{$id['id']}'");
+    return $buscar;
 }
 
 

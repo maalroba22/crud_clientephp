@@ -12,8 +12,10 @@ switch ($method) {
          case 'crear':
             $res = Clients::addClient($_POST);
             echo json_encode($res);
+            break;
          case 'buscarId':
             $res = Clients::buscarId($_POST);
             echo json_encode($res);
+            break;
       }
 }

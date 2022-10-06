@@ -52,20 +52,20 @@
 
           <div class="mb-3">
             <label for="recipient-name" class="col-form-label">Nombre:</label>
-            <input type="text" class="form-control input" id="nombre" name="nombre" >
+            <input type="text" class="form-control input" id="nombreb" name="nombreb" >
             <input type="hidden" class="form-control" id="id" name="id">
           </div>
           <div class="mb-3">
             <label for="recipient-name" class="col-form-label">Apellido:</label>
-            <input type="text" class="form-control input" id="apellido" name="apellido" >
+            <input type="text" class="form-control input" id="apellidob" name="apellidob" >
           </div>
           <div class="mb-3">
             <label for="recipient-name" class="col-form-label">Direccion:</label>
-            <input type="text" class="form-control input" id="direccion" name="direccion" >
+            <input type="text" class="form-control input" id="direccionb" name="direccionb" >
           </div>
           <div class="mb-3">
             <label for="recipient-name" class="col-form-label">Telefono:</label>
-            <input type="text" class="form-control input" id="telefono" name="telefono" >
+            <input type="text" class="form-control input" id="telefonob" name="telefonob" >
           </div>
         </form>
       </div>

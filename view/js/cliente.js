@@ -26,9 +26,9 @@ function getAllClient() {
                             <i class="bi bi-trash3 delete" data-id="${el.id_cliente}"></i>
                             </td>
                          </tr>
-                        `                               
-            })              
-           $('tbody').html(data)
+                        `
+            })
+            $('tbody').html(data)
         }
     }).fail(function () {
         console.log('error')
@@ -52,13 +52,13 @@ function getAllClient() {
  * @description Evento Guarda cliente
  */
 
-$("#modalCliente").on('click','#guardarCliente',(e)=> { 
+$("#modalCliente").on('click', '#guardarCliente', (e) => {
     e.preventDefault();
     let data = $('#frmCliente').serializeArray()
-    data.push({name:'opcn',value:'crear'})
+    data.push({ name: 'opcn', value: 'crear' })
     $.ajax({
         type: "POST",
-        url:urlCliente,
+        url: urlCliente,
         data: data,
         dataType: "json",
         success: function (response) {
@@ -70,30 +70,37 @@ $("#modalCliente").on('click','#guardarCliente',(e)=> {
                 position: "center",
                 timer: 3000,
                 timerProgressBar: true,
-              });
-              getAllClient();
+            });
+            getAllClient();
         }
     })
-    .fail(()=>{
-        console.log('error')
-    }) 
+        .fail(() => {
+            console.log('error')
+        })
 });
 
 
 
-$('body').on('click','.update', function (e) {
+$('body').on('click', '.update', function (e) {
     e.preventDefault()
-   /*  $('#modalActualizar').modal('show') */
-   let id = $(this).data('id')
-   $.ajax({
-    type: "POST",
-    url: "../controllers/client.php",
-    data: {opcn:'buscarId',id},
-    dataType: "json",
-    success: function (response) {
-        console.log('response')
-    }
-   });
+    let id = $(this).data('id')
+    $.ajax({
+        type: "POST",
+        url: urlCliente,
+        data: { opcn: 'buscarId', id },
+        dataType: "json",
+        success: function (res) {
+          let data = res.map(el=>{
+              $('#modalActualizar').modal('show')
+              $('#id').val(el.id_cliente)
+              $('#nombreb').val(el.nombre_c)
+              $('#apellidob').val(el.apellido_c)
+              $('#direccionb').val(el.direccion)
+              $('#telefonob').val(el.telefono)
+          })
+          
+        }
+    });
 
 });
 
@@ -103,12 +110,12 @@ $('body').on('click','.update', function (e) {
  * @name Actualizar Cliente
  * @description actualizar cliente
  */
-$("#editarCliente").click((e)=>{
+$("#editarCliente").click((e) => {
     e.preventDefault()
     let data = $('#frmActualiza').serializeArray()
     data.push({
-        name:'ocpn',
-        value:'update'
+        name: 'ocpn',
+        value: 'update'
     })
 
     $.ajax({
@@ -122,7 +129,7 @@ $("#editarCliente").click((e)=>{
     });
 
 
-   
+
 })
 
 /* $("#guardarCliente").click(function (e) { 
