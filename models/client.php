@@ -3,30 +3,30 @@
 class Clients
 {
 
-    /**
-     * @Description: Listar todos lo clientes
-     */
+  /**
+   * @Description: Listar todos lo clientes
+   */
 
-    public static function getAllClients()
-    {
-       // print_r('estoy en models');
-        include_once('../config/init_db.php');
-            DB::$encoding = 'utf8';
-            $resul = DB::query("SELECT * FROM cliente"); 
-           /*  print_r($resul); */
-            return $resul;  
-
-    }
-
-    /**
-     * @description: permite crear un cliente
-     * @params : data
-     */
-
-public static function addClient($data){
-     include_once('../config/init_db.php');
+  public static function getAllClients()
+  {
+    // print_r('estoy en models');
+    include_once('../config/init_db.php');
     DB::$encoding = 'utf8';
-    $insert = DB::query( "INSERT INTO cliente(
+    $resul = DB::query("SELECT * FROM cliente");
+    /*  print_r($resul); */
+    return $resul;
+  }
+
+  /**
+   * @description: permite crear un cliente
+   * @params : data
+   */
+
+  public static function addClient($data)
+  {
+    include_once('../config/init_db.php');
+    DB::$encoding = 'utf8';
+    $insert = DB::query("INSERT INTO cliente(
                                 nombre_c,
                                 apellido_c,
                                 direccion,
@@ -40,6 +40,21 @@ public static function addClient($data){
                                 '{$data['telefono']}', 
                                 1
                               )");
-                              return $insert;
-                    } 
+    return $insert;
+  }
+
+  public static function buscarId($id){
+    print_r('recibiendo');
+   /*  include_once('../config/init_db.php');
+    DB::$encoding = 'utf8';
+    $buscar = DB::query("SELECT * FROM cliente WHERE id_cliente = '{$id['id']}' ");
+ */
+
+
+
+
+}
+
+
+
 }

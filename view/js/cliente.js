@@ -22,8 +22,8 @@ function getAllClient() {
                             <td>${el.direccion}</td>
                             <td>${el.telefono}</td>
                             <td>
-                            <i class="bi bi-trash3 delete"></i>
-                            <i class="bi bi-journal-check update"></i>
+                            <i class="bi bi-journal-check update" id="buscar"data-id="${el.id_cliente}"></i>
+                            <i class="bi bi-trash3 delete" data-id="${el.id_cliente}"></i>
                             </td>
                          </tr>
                         `                               
@@ -35,7 +35,7 @@ function getAllClient() {
     })
 
 }
-
+/* data-bs-toggle="modal" data-bs-target="#modalActualizar" data-bs-whatever="@mdo" */
 
 /**
  * @description: Evento para Mostrar la Modal
@@ -45,7 +45,12 @@ function getAllClient() {
   console.log('estoy en el btn del index')
     $('#madalCliente').modal('show') 
  /*   document.getElementById('frmCliente').reset(); */
-//}) 
+//})
+
+/**
+ * @name Guardar Clientes
+ * @description Evento Guarda cliente
+ */
 
 $("#modalCliente").on('click','#guardarCliente',(e)=> { 
     e.preventDefault();
@@ -63,7 +68,7 @@ $("#modalCliente").on('click','#guardarCliente',(e)=> {
                 text: `Cliente Agregado con Exito`,
                 icon: "success",
                 position: "center",
-                timer: 5000,
+                timer: 3000,
                 timerProgressBar: true,
               });
               getAllClient();
@@ -74,6 +79,51 @@ $("#modalCliente").on('click','#guardarCliente',(e)=> {
     }) 
 });
 
+
+
+$('body').on('click','.update', function (e) {
+    e.preventDefault()
+   /*  $('#modalActualizar').modal('show') */
+   let id = $(this).data('id')
+   $.ajax({
+    type: "POST",
+    url: "../controllers/client.php",
+    data: {opcn:'buscarId',id},
+    dataType: "json",
+    success: function (response) {
+        console.log('response')
+    }
+   });
+
+});
+
+
+
+/**
+ * @name Actualizar Cliente
+ * @description actualizar cliente
+ */
+$("#editarCliente").click((e)=>{
+    e.preventDefault()
+    let data = $('#frmActualiza').serializeArray()
+    data.push({
+        name:'ocpn',
+        value:'update'
+    })
+
+    $.ajax({
+        type: "POST",
+        url: "../controllers/client.php",
+        data: data,
+        dataType: "json",
+        success: function (response) {
+            console.log(response)
+        }
+    });
+
+
+   
+})
 
 /* $("#guardarCliente").click(function (e) { 
     e.preventDefault();

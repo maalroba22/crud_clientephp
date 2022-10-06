@@ -9,10 +9,7 @@
 <body>
   <div class="container">
     <h1 class="m-5">Crud php y Maysql</h1>
-    <button class="btn btn-primary "  data-bs-toggle="modal" data-bs-target="#modalCliente" data-bs-whatever="@mdo">Nuevo Cliente</button>
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal
-</button>
+    <button class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#modalCliente" data-bs-whatever="@mdo">Nuevo Cliente</button>
     <table class="table table-hover mt-5">
       <thead>
         <tr>
@@ -33,10 +30,10 @@
   <!-- incluyo mi funcion clientes -->
   <script src="js/cliente.js"></script>
 
-  
 
 
-  
+
+
 </body>
 
 
