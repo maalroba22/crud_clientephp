@@ -62,6 +62,7 @@ $("#modalCliente").on('click', '#guardarCliente', (e) => {
         data: data,
         dataType: "json",
         success: function (response) {
+            
             $('#modalCliente').modal('hide')
             swal.fire({
                 title: "Exito",
@@ -104,36 +105,35 @@ $('body').on('click', '.update', function (e) {
 
 });
 
-
-
 /**
  * @name Actualizar Cliente
- * @description actualizar cliente
  */
-$("#editarCliente").click((e) => {
+
+$("#modalActualizar").on('click','#editarCliente',(e)=>{
     e.preventDefault()
-    let data = $('#frmActualiza').serializeArray()
+    let data = $('#frmActualizar').serializeArray()
     data.push({
-        name: 'ocpn',
+        name: 'opcn',
         value: 'update'
     })
-
     $.ajax({
         type: "POST",
         url: "../controllers/client.php",
         data: data,
         dataType: "json",
         success: function (response) {
-            console.log(response)
+            $('#modalActualizar').modal('hide');
+            swal.fire({
+                title: "Exito",
+                text: `Cliente Actualizado con Exito`,
+                icon: "success",
+                position: "center",
+                timer: 3000,
+                timerProgressBar: true,
+            });
+            getAllClient();
         }
     });
-
-
-
 })
 
-/* $("#guardarCliente").click(function (e) { 
-    e.preventDefault();
-    alert('estoy funcionando')
-    
-}); */
+

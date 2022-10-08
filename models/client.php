@@ -47,13 +47,28 @@ class Clients
    * @description: Buscar cliente por id
    * @param id
    */
-  public static function buscarId($id){
-   include_once('../config/init_db.php');
+  public static function buscarId($id)
+  {
+    include_once('../config/init_db.php');
     DB::$encoding = 'utf8';
     $buscar = DB::query("SELECT * FROM cliente WHERE id_cliente = '{$id['id']}'");
     return $buscar;
-}
+  }
 
-
-
+  /**
+   * @description: Actualizar Clientes
+   */
+  public static function updateClient($data)
+  {
+    /*  print_r('estoy en el modelo'); */
+    include_once('../config/init_db.php');
+    DB::$encoding = 'utf8';
+    $actualizar = DB::query(" UPDATE cliente SET 
+                              nombre_c = '{$data['nombreb']} ',
+                              apellido_c = '{$data['nombreb']} ',
+                              direccion = '{$data['nombreb']} ',
+                              telefono = '{$data['nombreb']} '
+                              WHERE  id_cliente = '{$data['id']}'");
+    return $actualizar;
+  }
 }

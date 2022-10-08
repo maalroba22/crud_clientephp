@@ -17,5 +17,10 @@ switch ($method) {
             $res = Clients::buscarId($_POST);
             echo json_encode($res);
             break;
+         case 'update':
+     
+           $res = Clients::updateClient($_POST);
+            echo json_encode($res); 
+            break;
       }
 }
